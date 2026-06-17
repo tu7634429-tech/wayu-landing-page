@@ -1,102 +1,78 @@
 .about {
-  padding: 100px 0;
-  background: #ffffff;
-}
-
-.about-container {
-  width: 90%;
-  max-width: 1280px;
-  margin: auto;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  background: linear-gradient(135deg, #e6f2ef, #dfecea);
+  min-height: 700px;
+  overflow: hidden;
+}
 
-  align-items: center;
+/* IMAGE */
+.about-image {
+  overflow: hidden;
 }
 
 .about-image img {
   width: 100%;
-  border-radius: 30px;
-
+  height: 100%;
   object-fit: cover;
+
+  transform: scale(1.05);
+  transition: 0.6s ease;
 }
 
-.section-tag {
-  display: inline-block;
+/* subtle zoom hover */
+.about-image:hover img {
+  transform: scale(1.1);
+}
 
+/* CONTENT */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 80px 14%;
+}
+
+/* TAG */
+.about-content span {
   color: #2fb1b2;
-
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
-
-  letter-spacing: 2px;
-
-  margin-bottom: 20px;
+  letter-spacing: 5px;
+  margin-bottom: 18px;
 }
 
+/* TITLE */
 .about-content h2 {
-  font-size: 3rem;
+  font-size: 46px;
   line-height: 1.2;
-
-  color: #1e1e1e;
-
-  margin-bottom: 25px;
+  margin-bottom: 24px;
+  color: #111;
 }
 
+/* TEXT */
 .about-content p {
-  font-size: 1rem;
-  line-height: 1.9;
-
-  color: #666666;
-
-  margin-bottom: 35px;
-}
-
-.about-btn {
-  padding: 14px 30px;
-
-  border: none;
-  border-radius: 50px;
-
-  background: #2fb1b2;
-  color: white;
-
   font-size: 15px;
-  font-weight: 600;
-
-  cursor: pointer;
-
-  transition: all 0.3s ease;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 18px;
+  max-width: 520px;
 }
 
-.about-btn:hover {
-  transform: translateY(-3px);
-
-  background: #259899;
-}
-
-@media (max-width: 992px) {
-  .about-container {
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about {
     grid-template-columns: 1fr;
-    gap: 50px;
   }
 
   .about-content {
+    padding: 50px 24px;
     text-align: center;
+    align-items: center;
   }
 
   .about-content h2 {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .about {
-    padding: 80px 0;
-  }
-
-  .about-content h2 {
-    font-size: 2rem;
+    font-size: 30px;
   }
 }

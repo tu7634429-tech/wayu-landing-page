@@ -1,0 +1,184 @@
+.howto-premium {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 10%;
+  background: #f6fbfa;
+  overflow: hidden;
+}
+
+/* BACKGROUND ORBS */
+.bg-orb {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.orb1 {
+  background: #2fb1b2;
+  top: -150px;
+  left: -150px;
+}
+
+.orb2 {
+  background: #a6e7e5;
+  bottom: -150px;
+  right: -150px;
+}
+
+/* LEFT PRODUCT */
+.howto-product {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* GLOW RING */
+.glow-ring {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  border: 2px solid rgba(47,177,178,0.25);
+  animation: pulse 4s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.4; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  100% { transform: scale(0.95); opacity: 0.4; }
+}
+
+/* PRODUCT IMAGE */
+.howto-product img {
+  width: 520px;
+  max-width: 100%;
+  z-index: 2;
+  filter: drop-shadow(0 60px 80px rgba(0,0,0,0.2));
+}
+
+/* RIGHT SIDE */
+.howto-info {
+  flex: 1;
+  padding-left: 80px;
+  z-index: 2;
+}
+
+/* TAG */
+.tag {
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: #2fb1b2;
+  font-weight: 600;
+}
+
+/* TITLE */
+.howto-info h2 {
+  font-size: 48px;
+  margin: 15px 0 40px;
+  color: #111;
+}
+
+/* STEPS */
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* CARD */
+.step-card {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+
+  padding: 22px;
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(15px);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* HOVER PREMIUM EFFECT */
+.step-card:hover {
+  background: rgba(47,177,178,0.08);
+  box-shadow: 0 20px 50px rgba(47,177,178,0.2);
+}
+
+/* NUMBER */
+.step-num {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1fb3b3, #2fd1c8);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+}
+
+/* TEXT */
+.step-card h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.step-card p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #666;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .howto-premium {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .howto-info {
+    padding-left: 0;
+    margin-top: 40px;
+  }
+
+  .howto-product img {
+    width: 320px;
+  }
+}
+/* IMAGE WRAPPER (NEW ONLY) */
+.image-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* UPDATED IMAGE ONLY */
+.image-wrap img {
+  width: 640px;        /* 👈 BIGGER IMAGE */
+  max-width: 100%;
+
+  transform: scale(1.1);  /* slight zoom */
+  filter: drop-shadow(0 70px 90px rgba(0,0,0,0.25));
+
+  border-radius: 12px;   /* premium soft edge */
+}
